@@ -1,0 +1,473 @@
+body {
+  margin: 0;
+  padding-top: 70px;
+  font-family: 'Inter', sans-serif;
+  background: #f3f4f6;
+  color: #333;
+}
+
+/* Navbar y footer */
+.bg-custom,
+footer {
+  background-color: #0f172a !important;
+}
+
+footer {
+  color: #cbd5e1;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* Navbar fixed-top */
+#navReveal.nav-hidden,
+#navbar.nav-hidden {
+  top: -70px;
+  position: fixed;
+}
+
+#navReveal.nav-visible,
+#navbar.nav-visible {
+  top: 0;
+  position: fixed;
+  transition: top 0.3s ease;
+  width: 100%;
+  z-index: 1030;
+}
+
+/* Hover zone (zona invisible para detectar hover) */
+#hoverZone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  z-index: 1040;
+  background: transparent;
+  pointer-events: auto;
+}
+
+/* Navbar links */
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #facc15 !important; /* amarillo suave */
+}
+
+/* Botón del nav */
+.navbar .btn-outline-light:hover {
+  background-color: #facc15;
+  color: #0f172a;
+  border-color: #facc15;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #4338ca, #6366f1);
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  padding: 2rem 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Cards */
+.card,
+.discount-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.discount-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(255, 99, 71, 0.3);
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #374151;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.card-footer {
+  background-color: #f9fafb;
+  border-top: none;
+  padding: 0.75rem 1rem;
+}
+
+.card-footer strong {
+  font-size: 1.1rem;
+  color: #dc2626;
+}
+
+/* Precios en descuento */
+.discount-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: linear-gradient(135deg, #ff3c3c, #ff8e3c);
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  z-index: 10;
+  animation: pulse 1.2s infinite;
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #a0aec0;
+  margin-right: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.discounted-price {
+  color: #ff4d4f;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+/* Input número (desktop) */
+.input-number {
+  display: flex;
+  align-items: center;
+  max-width: 120px;
+  margin-top: auto;
+}
+
+.input-number input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: none;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  height: 36px;
+  width: 60px;
+  font-size: 1rem;
+  outline: none;
+  margin: 0 4px;
+}
+
+.input-number input[type="number"]::-webkit-inner-spin-button,
+.input-number input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-number button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  width: 32px;
+  height: 36px;
+  font-size: 1.3rem;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.input-number button:hover {
+  background-color: #0056b3;
+}
+
+/* Input número móvil */
+.input-number-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 160px;
+  margin: 10px 0 0 0;
+}
+
+.input-number-mobile input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: none;
+  text-align: center;
+  border: 2px solid #a0aec0;
+  border-radius: 12px;
+  height: 48px;
+  width: 70px;
+  font-size: 1.3rem;
+  outline: none;
+  font-weight: 600;
+  color: #2d3748;
+  transition: border-color 0.3s ease;
+}
+
+.input-number-mobile input[type="number"]:focus {
+  border-color: #4299e1;
+  box-shadow: 0 0 6px #90cdf4;
+}
+
+.input-number-mobile input[type="number"]::-webkit-inner-spin-button,
+.input-number-mobile input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-number-mobile button {
+  background: linear-gradient(145deg, #4a90e2, #357ABD);
+  border: none;
+  color: white;
+  width: 52px;
+  height: 52px;
+  font-size: 2.2rem;
+  font-weight: 900;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 8px 15px rgba(69, 114, 184, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+}
+
+.input-number-mobile button:hover {
+  background: linear-gradient(145deg, #6298e6, #4a7ccf);
+  box-shadow: 0 10px 20px rgba(78, 134, 227, 0.6);
+  transform: translateY(-2px);
+}
+
+.input-number-mobile button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #a7c6ff;
+}
+
+.input-number-mobile button:active {
+  background: linear-gradient(145deg, #2c5cb0, #1f437e);
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.4);
+  transform: translateY(1px);
+}
+
+/* Filtros */
+.filtro-container {
+  max-width: 800px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.06);
+  font-size: 0.9rem;
+}
+
+.filtro-container input,
+.filtro-container select {
+  border-radius: 8px;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.filtro-container input:focus,
+.filtro-container select:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .filtro-container .row {
+    flex-direction: column;
+  }
+
+  .filtro-container .col-md-4 {
+    width: 100%;
+  }
+
+  .mensaje-wsp {
+    font-size: 13px;
+    max-width: 80vw;
+    padding: 10px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mensaje-wsp {
+    font-size: 12px;
+    max-width: 70vw;
+    padding: 17px 6px;
+  }
+}
+
+/* Mensaje sin resultados */
+#no-result {
+  display: none;
+  text-align: center;
+  font-weight: 500;
+  color: #dc3545;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+/* Banner oferta */
+#bannerOferta {
+  background: linear-gradient(90deg, #f97316, #ea580c);
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.6);
+}
+
+/* Sección contacto */
+#contacto {
+  background-color: #e0e7ff;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.15);
+  text-align: center;
+}
+
+#contacto h2 {
+  margin-bottom: 1.5rem;
+  color: #3730a3;
+}
+
+#contacto .btn-contact {
+  margin: 0 0.5rem;
+  min-width: 140px;
+}
+
+/* Botones outline primary */
+.btn-outline-primary {
+  border-color: #6366f1;
+  color: #6366f1;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #6366f1;
+  color: #fff;
+}
+
+/* Botón flotante WhatsApp */
+.btn-flotante-whatsapp,
+.boton-wsp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  user-select: none;
+  z-index: 9999;
+  transition: transform 0.3s ease;
+  font-size: 24px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  padding: 15px;
+  text-decoration: none;
+  touch-action: none;
+}
+
+.btn-flotante-whatsapp:hover {
+  transform: scale(1.1);
+}
+
+.btn-flotante-whatsapp.clicked {
+  animation: pulse 0.6s ease;
+}
+
+/* Mensaje flotante estilo toast */
+.mensaje-wsp {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #25d366;
+  color: #222;
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  white-space: nowrap;
+  max-width: 220px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, left 0.3s ease, right 0.3s ease;
+  line-height: 1.4;
+}
+
+.mensaje-wsp.visible {
+  opacity: 1;
+}
+
+/* Posiciones mensaje */
+.mensaje-derecha {
+  left: 70px;
+  top: 10px;
+}
+.mensaje-izquierda {
+  right: 70px;
+  top: 10px;
+}
+
+/* Esquinas para mensajes */
+.esquina-superior-izquierda {
+  top: 20px;
+  left: 20px;
+}
+
+.esquina-superior-derecha {
+  top: 20px;
+  right: 20px;
+}
+
+.esquina-inferior-izquierda {
+  bottom: 20px;
+  left: 20px;
+}
+
+.esquina-inferior-derecha {
+  bottom: 20px;
+  right: 20px;
+}
