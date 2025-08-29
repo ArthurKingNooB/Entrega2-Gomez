@@ -7,7 +7,7 @@
         "id": "1",
         "nombre": "Lavaloza 200ml",
         "descripcion": "Lavaloza concentrado con aroma a limón.",
-        "precio": 129,
+        "precio": 56.99,
         "categoria": "Limpieza",
         "imagen": "assets/dummie-limpiapisos-200-ml.webp",
         "stock": 15,
@@ -19,19 +19,19 @@
         "id": "2",
         "nombre": "Pack de Atún (6 unidades)",
         "descripcion": "Atún en lata al natural, ideal para ensaladas y comidas rápidas.",
-        "precio": 450,
+        "precio": 78.99,
         "categoria": "Comida",
         "imagen": "assets/atun.jfif",
         "stock": 20,
         "disponible": true,
-        "descuento": 10,
+        "descuento": 0,
         "etiquetas": ["comida", "enlatados", "oferta"]
       },
       {
         "id": "3",
         "nombre": "Mazapán 300g",
         "descripcion": "Mazapán artesanal de almendra.",
-        "precio": 220,
+        "precio": 86.99,
         "categoria": "Comida",
         "imagen": "assets/2725_Mazapan_untable_FRONT1_480x.webp",
         "stock": 30,
@@ -43,14 +43,26 @@
         "id": "4",
         "nombre": "Limpiapisos 5L",
         "descripcion": "Limpiador desinfectante de larga duración.",
-        "precio": 320,
+        "precio": 110.99,
         "categoria": "Limpieza",
         "imagen": "assets/dummie-limpiapisos-cmyk.webp",
         "stock": 10,
         "disponible": true,
-        "descuento": 15,
+        "descuento": 0,
         "etiquetas": ["limpieza", "hogar", "desinfectante"]
+      }, {
+        "id": "5",
+        "nombre": "Mazapan Paquete",
+        "descripcion": "Paquete untable de 150g.",
+        "precio": 43.50,
+        "categoria": "Comida",
+        "imagen": "assets/mazapan paquetito.jfif",
+        "stock": 76,
+        "disponible": true,
+        "descuento": 30,
+        "etiquetas":["dulce", "postres", "almendra"]
       }
+      
     ]
   }
 }
