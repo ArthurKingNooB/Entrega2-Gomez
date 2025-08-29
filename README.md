@@ -35,6 +35,7 @@ Si querés probar el proyecto en tu computadora:
 
 1. Clonar el repositorio de GitHub:
    ```bash
+
    git clone https://github.com/ArthurKingNooB/Entrega2-Gomez.git
    ```
 2. Entrar a la carpeta del proyecto::
