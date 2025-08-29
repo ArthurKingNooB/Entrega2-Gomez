@@ -1,0 +1,56 @@
+{
+  "Productos": {
+    "name": "Mi Tienda",
+    "currency": "UYU",
+    "products": [
+      {
+        "id": "1",
+        "nombre": "Lavaloza 500ml",
+        "descripcion": "Lavaloza concentrado con aroma a limón.",
+        "precio": 129,
+        "categoria": "Limpieza",
+        "imagen": "assets/img/lavaloza-500.jpg",
+        "stock": 15,
+        "disponible": true,
+        "descuento": 0,
+        "etiquetas": ["limpieza", "cocina", "detergente"]
+      },
+      {
+        "id": "2",
+        "nombre": "Pack de Atún (6 unidades)",
+        "descripcion": "Atún en lata al natural, ideal para ensaladas y comidas rápidas.",
+        "precio": 450,
+        "categoria": "Comida",
+        "imagen": "assets/img/atun-pack.jpg",
+        "stock": 20,
+        "disponible": true,
+        "descuento": 10,
+        "etiquetas": ["comida", "enlatados", "oferta"]
+      },
+      {
+        "id": "3",
+        "nombre": "Mazapán 300g",
+        "descripcion": "Mazapán artesanal de almendra.",
+        "precio": 220,
+        "categoria": "Comida",
+        "imagen": "assets/img/mazapan-300.jpg",
+        "stock": 30,
+        "disponible": true,
+        "descuento": 0,
+        "etiquetas": ["dulce", "postres", "almendra"]
+      },
+      {
+        "id": "4",
+        "nombre": "Limpiapisos 5L",
+        "descripcion": "Limpiador desinfectante de larga duración.",
+        "precio": 320,
+        "categoria": "Limpieza",
+        "imagen": "assets/img/limpiapisos-5l.jpg",
+        "stock": 10,
+        "disponible": true,
+        "descuento": 15,
+        "etiquetas": ["limpieza", "hogar", "desinfectante"]
+      }
+    ]
+  }
+}
