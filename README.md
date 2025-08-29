@@ -39,7 +39,7 @@ Si querés probar el proyecto en tu computadora:
    ```
 2. Entrar a la carpeta del proyecto::
    ```bash
-   cd mi-tienda
+   cd Entrega2-Gomez
    ```
 3. Instalar las dependencias:
    ```bash
