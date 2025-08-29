@@ -1,6 +1,6 @@
 # E-commerse Mi Tienda
 
-**Link:** [https://mi-tienda-seven-opal.vercel.app/](https://mi-tienda-seven-opal.vercel.app/)
+**Link:** [https://entrega2-gomez.vercel.app/](https://entrega2-gomez.vercel.app/)
 
 Este es un proyecto de prueba de una tienda online que hice como proyecto personal. La idea es que se puedan ver productos, agregarlos al carrito y simular un pedido.  
 
@@ -19,7 +19,7 @@ Este es un proyecto de prueba de una tienda online que hice como proyecto person
 
 ## Cómo usarlo
 
-Solo entrar al link: [https://mi-tienda-seven-opal.vercel.app/](https://mi-tienda-seven-opal.vercel.app/)  
+Solo entrar al link: [https://entrega2-gomez.vercel.app/](https://entrega2-gomez.vercel.app/)  
 No hace falta instalar nada, funciona directo en el navegador.  
 
 ## Notas
