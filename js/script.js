@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
   // Incremento y decremento para desktop y mobile
   document.querySelectorAll('.input-number, .input-number-mobile').forEach(wrapper => {
@@ -124,6 +126,55 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById('botonResumen').addEventListener('click', mostrarResumenProductos);
 
 });
+// Función para mostrar productos
+function mostrarProductos(productos) {
+  const contenedor = document.getElementById("productos-contenedor");
+  contenedor.innerHTML = ""; // limpiar contenedor
+
+  productos.forEach((p) => {
+    const precioFinal = p.descuento > 0 
+      ? (p.precio - (p.precio * p.descuento) / 100).toFixed(2)
+      : p.precio.toFixed(2);
+
+  const productoHTML = `
+  <div class="producto-card">
+    <img src="${p.imagen}" alt="${p.nombre}">
+    <h3>${p.nombre}</h3>
+    <p>${p.descripcion}</p>
+    <p>Categoría: ${p.categoria}</p>
+    <p class="precio">${p.descuento > 0 
+        ? `<s>$${p.precio}</s> <strong>$${precioFinal}</strong> <span class="descuento">-${p.descuento}%</span>` 
+        : `<strong>$${p.precio}</strong>`
+      }</p>
+    <p><strong>Stock disponible: ${p.stock}</strong></p>
+  </div>
+`;
+
+    contenedor.innerHTML += productoHTML;
+  });
+}
+
+// Función para cargar JSON
+async function cargarProductos() {
+  try {
+    const response = await fetch("data/data.json"); // ruta a tu JSON
+    const data = await response.json();
+
+    // devolver la lista de productos
+    return data.Productos.products;
+  } catch (error) {
+    console.error("Error cargando productos:", error);
+    return [];
+  }
+}
+
+
+// Configurar botón
+document.getElementById("btnMostrar").addEventListener("click", async () => {
+  const productos = await cargarProductos();
+  mostrarProductos(productos);
+});
+
 
 // Función para enviar pedido por WhatsApp
 function enviarPedidoWhatsApp() {

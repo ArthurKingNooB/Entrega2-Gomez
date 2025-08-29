@@ -383,6 +383,85 @@ header {
   color: #fff;
 }
 
+/* Estilo del botón */
+#btnMostrar {
+  padding: 12px 25px;
+  background-color: #4CAF50; /* verde */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin-bottom: 20px;
+}
+
+#btnMostrar:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Contenedor de cards */
+#productos-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Card de producto */
+.producto-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Imagen dentro de la card */
+.producto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Títulos y textos */
+.producto-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.producto-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Precio */
+.producto-card .precio {
+  font-weight: bold;
+  color: #333;
+}
+
+.producto-card .precio s {
+  color: #999;
+}
+
+.producto-card .descuento {
+  color: #e53935;
+  font-weight: bold;
+}
+
+
+
+
 /* Botón flotante WhatsApp */
 .btn-flotante-whatsapp,
 .boton-wsp {
