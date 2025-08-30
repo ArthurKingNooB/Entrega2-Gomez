@@ -157,7 +157,7 @@ function mostrarProductos(productos) {
 // Función para cargar JSON
 async function cargarProductos() {
   try {
-    const response = await fetch("data/data.json"); // ruta a tu JSON
+    const response = await fetch("data/data.json"); 
     const data = await response.json();
 
     // devolver la lista de productos
