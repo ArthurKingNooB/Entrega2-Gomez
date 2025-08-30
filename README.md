@@ -6,7 +6,8 @@ Este es un proyecto de prueba de una tienda online que hice como proyecto person
 
 ## Qué tiene
 
-- Ver productos: Podes ver todos los productos que puse y están organizados por categorías.  
+- Ver productos: Podes ver todos los productos que puse y están organizados por categorías. 
+- Observaciones: Puedes agregar observaciones al pedido.
 - Filtros: Se pueden filtrar los productos que tienen oferta o no.  
 - Carrito de compras: Se puede agregar productos al carrito y ver un resumen.  
 - Ofertas: Algunos productos tienen descuentos.  
